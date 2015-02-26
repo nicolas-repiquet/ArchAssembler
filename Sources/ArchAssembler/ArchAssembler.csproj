@@ -76,15 +76,14 @@
     <Compile Include="Elements\UInt8Element.cs" />
     <Compile Include="Elements\UIntPElement.cs" />
     <Compile Include="Elements\VariableSizeStringElement.cs" />
+    <Compile Include="X64\X64Extensions.cs" />
     <Compile Include="X86\EffectiveAddress.cs" />
     <Compile Include="X86\Instructions.cs" />
     <Compile Include="X86\Registers.cs" />
     <Compile Include="X86\X86Extensions.cs" />
     <Compile Include="X86\X86ExtensionsGenerated.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="X64\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
