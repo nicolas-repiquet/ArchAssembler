@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92439B50-01F9-4D21-9E03-077F4F4D5B37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArchAssembler</RootNamespace>
+    <AssemblyName>ArchAssembler</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Elements\AbsoluteMemoryAddress32Element.cs" />
+    <Compile Include="Elements\AbsoluteMemoryAddressPElement.cs" />
+    <Compile Include="Elements\AlignmentElement.cs" />
+    <Compile Include="Assembler.cs" />
+    <Compile Include="Elements\ByteArrayElement.cs" />
+    <Compile Include="Elements\CompositeElement.cs" />
+    <Compile Include="Elements\ConcreteElement.cs" />
+    <Compile Include="Elements\Element.cs" />
+    <Compile Include="Elements\ElementCollection.cs" />
+    <Compile Include="Elements\ElementCollectionExtensions.cs" />
+    <Compile Include="Elements\FileAddress16Element.cs" />
+    <Compile Include="Elements\MemorySize16Element.cs" />
+    <Compile Include="PortableExecutable\ExportTableElement.cs" />
+    <Compile Include="Elements\FileAddress32Element.cs" />
+    <Compile Include="Elements\FileSize16Element.cs" />
+    <Compile Include="Elements\FileSize32Element.cs" />
+    <Compile Include="Elements\FixedSizeStringElement.cs" />
+    <Compile Include="IAssemblingContext.cs" />
+    <Compile Include="Elements\IDependencyCollection.cs" />
+    <Compile Include="PortableExecutable\IImageDirectories.cs" />
+    <Compile Include="PortableExecutable\Image.cs" />
+    <Compile Include="PortableExecutable\Image32.cs" />
+    <Compile Include="PortableExecutable\Image64.cs" />
+    <Compile Include="PortableExecutable\ImageDirectory.cs" />
+    <Compile Include="PortableExecutable\ImageSection.cs" />
+    <Compile Include="PortableExecutable\ImageSectionType.cs" />
+    <Compile Include="PortableExecutable\ImageSubsystem.cs" />
+    <Compile Include="PortableExecutable\ImageType.cs" />
+    <Compile Include="PortableExecutable\ImportTableElement.cs" />
+    <Compile Include="Elements\MarkerElement.cs" />
+    <Compile Include="Elements\MemorySize32Element.cs" />
+    <Compile Include="PointerSize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Elements\RelativeMemoryAddress32Element.cs" />
+    <Compile Include="Elements\RelativeMemoryAddressPElement.cs" />
+    <Compile Include="Elements\UInt16Element.cs" />
+    <Compile Include="Elements\UInt32Element.cs" />
+    <Compile Include="Elements\UInt64Element.cs" />
+    <Compile Include="Elements\UInt8Element.cs" />
+    <Compile Include="Elements\UIntPElement.cs" />
+    <Compile Include="Elements\VariableSizeStringElement.cs" />
+    <Compile Include="X86\EffectiveAddress.cs" />
+    <Compile Include="X86\Instructions.cs" />
+    <Compile Include="X86\Registers.cs" />
+    <Compile Include="X86\X86Extensions.cs" />
+    <Compile Include="X86\X86ExtensionsGenerated.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="X64\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
